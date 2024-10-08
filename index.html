@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desktop Simulation Resume</title>
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/logo" href="images/HeidyLOGOwhite.png"> 
+</head>
+
+<!-- Lock Screen -->
+<div id="lock-screen" class="lock-screen">
+     <!-- Clouds -->
+     <div class="clouds">
+        <div class="cloud"></div>
+        <div class="cloud"></div>
+        <div class="cloud"></div>
+        <div class="cloud"></div>
+        <div class="cloud"></div>
+        <div class="cloud"></div>
+        <div class="cloud"></div>
+        <div class="cloud"></div>
+        <div class="cloud"></div>
+    </div>
+    <!-- Circular logo -->
+    <div class="lock-logo">
+        <img src="images/HeidyLOGOwhite.png" alt="Logo" />
+    </div>
+
+    <!-- Password input field -->
+    <div class="password-box">
+        <input type="password" id="password-input" placeholder="Enter password" />
+    </div>
+
+    <!-- Password hint -->
+    <div class="password-hint">
+        <p>Hint: Its 12345</p>
+    </div>
+</div>
+
+
+
+
+<body>
+    <!-- Desktop Background -->
+    <div class="desktop">
+        <!-- Taskbar -->
+        <div class="taskbar">
+            <!-- Logo in bottom left -->
+    <div class="taskbar-logo">
+        <img src="images/HeidyLOGOwhite.png" alt="Logo" />
+    </div>
+
+    <!-- Existing taskbar icons -->
+    <div class="taskbar-icon" id="portfolio-btn">Portfolio</div>
+    <div class="taskbar-icon" id="contact-btn">Contact</div>
+        </div>
+
+        
+        
+        <!-- Desktop Icons -->
+        <div class="desktop-icons">
+            <div class="icon" id="about-me">
+                <img src="images/folders.png" alt="About Me Icon">
+                <p>About Me</p>
+            </div>
+            <div class="icon" id="skills">
+                <img src="images/folders.png" alt="Skills Icon">
+                <p>Skills</p>
+            </div>
+            <div class="icon" id="projects">
+                <img src="images/folders.png" alt="Projects Icon">
+                <p>Projects</p>
+            </div>
+
+            <!-- New icons -->
+    <div class="icon" id="work-experience">
+        <img src="images/folders.png" alt="Work Experience Icon">
+        <p>Work Experience</p>
+    </div>
+
+   <!-- GitHub Icon -->
+<div class="icon">
+    <a href="https://github.com/heidyv15" target="_blank">
+        <img src="images/github.png" alt="GitHub Icon">
+        <p>GitHub</p>
+    </a>
+</div>
+
+<div class="icon" id="resume-pdf">
+    <a href="documents/Resume.pdf" target="_blank">
+        <img src="images/pdf1.png" alt="Resume PDF Icon">
+        <p>Resume PDF</p>
+    </a>
+</div>
+
+
+    <!-- LinkedIn Icon -->
+<div class="icon">
+    <a href="https://www.linkedin.com/in/heidy-veliz-fiu6393987/" target="_blank">
+        <img src="images/linkedin1.png" alt="LinkedIn Icon">
+        <p>LinkedIn</p>
+    </a>
+</div>
+
+        <!-- Work Experience Window (Hidden by Default) -->
+<div class="window" id="work-experience-window" style="display:none;">
+    <div class="window-header">
+        <p>Work Experience</p>
+        <button class="close-btn" onclick="closeWindow('work-experience-window')">X</button>
+    </div>
+    <div class="window-content">
+        <ul>
+            <b><li>America Reads Tutor - 2023-2024 School Year</li></b>
+            <p>Worked one-on-one with elementary students to improve literacy skills.</p>
+            <p>Developed personalized lesson plans and reading exercises to support student growth</p>
+            <p>Fostered a positive learning environment to encourage reading engagement and comprehension.</p>
+            <br>
+
+            <b><li>Computational Thinking Teacher - Fall 2024</li></b>
+            <p>Collaborated with two peers to teach high school students foundational coding principles in Python.</p>
+            <p>Co-created lesson plans that emphasized problem-solving and logic through computational thinking.</p>
+            <p>Guided students through hands-on coding projects to strengthen their programming skills.</p>
+            <br>
+
+           <b> <li>K-8 Substitute Teacher - January 2024 - August 2024</li></b>
+            <p>Provided classroom management and instruction for a variety of subjects and grade levels.</p>
+            <p>Adapted to different teaching environments to ensure continuity of education in the absence of regular teachers.</p>
+            <p>Engaged students in active learning by delivering lesson plans and reinforcing curriculum goals.</p>
+            <br>
+            <!-- Add more experience items as needed -->
+        </ul>
+    </div>
+</div>
+
+        
+        <!-- Windows for Resume Sections (Hidden by Default) -->
+        <div class="window" id="about-window" style="display:none;">
+            <div class="window-header">
+                <p>About Me</p>
+                <button class="close-btn" onclick="closeWindow('about-window')">X</button>
+            </div>
+            <div class="window-content">
+                <p>Hello! My name is Heidy Veliz, and I am currently pursuing a Bachelor of Science in Information Technology at Florida International University.</p>
+
+    <p>     My passion for IT has been a constant throughout my life, as I’ve always been drawn to technology in one way or another. From solving tech-related challenges to exploring the latest advancements, I’ve developed a deep connection to the field that drives me to continuously learn and grow.</p>
+
+    <p>     I am also planning to further my education by obtaining a Master’s degree in Engineering Management, which will allow me to combine my technical expertise with leadership and project management skills.</p>
+
+    <p>     Throughout my journey, I’ve gained hands-on experience as a Computational Thinking Teacher for high school students, where I prepare lesson plans and teach coding in Python. I’ve also worked as a K-8 Substitute Teacher and a Reading Tutor, where I developed strong communication skills and a deep commitment to education.</p>
+
+    <p>     I’m always eager to learn, adapt, and apply my knowledge in ways that create meaningful impact. Whether it’s through developing user-friendly websites, mastering the latest tech, or helping students succeed, I am excited about the future and the opportunities that lie ahead.</p>
+    <br>
+            </div>
+        </div>
+        
+        <div class="window" id="skills-window" style="display:none;">
+            <div class="window-header">
+                <p>Skills</p>
+                <button class="close-btn" onclick="closeWindow('skills-window')">X</button>
+            </div>
+            <div class="window-content">
+                <ul>
+                    <li>HTML/CSS</li>
+                    <li>JavaScript</li>
+                    <li>Python</li>
+                    <li>Troubleshooting</li>
+                    <li>Skills Development</li>
+                    <li>Operating Systems</li>
+                    <li>Multitasking</li>
+                    <li>Project Management</li>
+                    <li>Git</li>
+                    <li>Testing and Debugging</li>
+                    <li>Technology Integration</li>
+                    <li>Curriculum Design</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="window" id="projects-window" style="display:none;">
+            <div class="window-header">
+                <p>Projects</p>
+                <button class="close-btn" onclick="closeWindow('projects-window')">X</button>
+            </div>
+            <div class="window-content">
+                <ul>
+                    <li><a href="https://heidyv15.github.io/IT-Support/">Project 1 - School Help Desk System</a></li>
+                    <P>The School Helpdesk System is a web-based platform designed to streamline support requests for parents, students, and teachers. </P>
+                    <p>Built with Flask, Python, and SQLite, the site allows users to submit tickets, describe issues, and select priority levels. It features a dynamic FAQ section and provides real-time feedback through flash messages.</p>
+
+                    <p>The project focuses on delivering a responsive, user-friendly experience with a clear interface for seamless interaction.</p>
+                    <p>(Note: The sites back-end is not functional due to it being hosted on github.)</p>
+                    <br>
+                    <li><a href="#">Project 2</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contact Window (Hidden by Default) -->
+<div class="window" id="contact-window" style="display:none;">
+    <div class="window-header">
+        <p>Contact Me</p>
+        <button class="close-btn" onclick="closeWindow('contact-window')">X</button>
+    </div>
+    <div class="window-content">
+        <p>Feel free to reach out to me using the following contact information:</p>
+        <ul>
+            <li>Personal Email: <a href="mailto:velizheidy1578@gmail.com">velizheidy1578@gmail.com</a></li>
+            <li>School Email: <a href="hveli002@fiu.edu">hveli002@fiu.edu</a></li>
+            <li>Phone: (786) 803-0809</li>
+            <li>LinkedIn: <a href="https://www.linkedin.com/in/heidy-veliz-fiu6393987/" target="_blank">Heidy Veliz LinkedIn Profile</a></li>
+        </ul>
+
+        
+</div>
+
+
+    <script src="script.js"></script>
+</body>
+</html>

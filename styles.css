@@ -1,0 +1,391 @@
+/* Lock Screen Styling */
+.lock-screen {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(135deg, #A3BBAD, #196876); /* Gradient background */
+    overflow: hidden; /* Ensures clouds stay within the screen */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    color: white;
+}
+
+/* Cloud Styling */
+.clouds {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none; /* Makes sure clouds don't interfere with input */
+}
+
+.cloud {
+    position: absolute;
+    width: 200px;
+    height: 100px;
+    background: white;
+    opacity: 0.8;
+    border-radius: 50%;
+    filter: blur(10px);
+    animation: moveClouds 30s linear infinite;
+}
+
+/* Create a few cloud variations with different sizes and animations */
+.cloud:nth-child(1) {
+    top: 10%;
+    left: -200px;
+    width: 270px;
+    height: 170px;
+    animation-duration: 15s;
+}
+
+
+.cloud:nth-child(2) {
+    top: 60%;
+    left: -400px;
+    width: 180px;
+    height: 90px;
+    animation-duration: 15s;
+}
+
+.cloud:nth-child(3) {
+    top: 60%;
+    left: -300px;
+    width: 300px;
+    height: 140px;
+    animation-duration: 15s;
+}
+
+.cloud:nth-child(4) {
+    top: 10%;
+    left: -300px;
+    width: 200px;
+    height: 100px;
+    animation-duration: 15s;
+}
+.cloud:nth-child(5) {
+    top: 20%;
+    left: -50px;
+    width: 200px;
+    height: 100px;
+    animation-duration: 15s;
+}
+
+.cloud:nth-child(6) {
+    top: 75%;
+    left: -400px;
+    width: 180px;
+    height: 90px;
+    animation-duration: 25s;
+}
+
+.cloud:nth-child(7) {
+    top: 75%;
+    left: -300px;
+    width: 300px;
+    height: 140px;
+    animation-duration: 25s;
+}
+
+/* Keyframes for cloud movement */
+@keyframes moveClouds {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(110vw); /* Moves clouds from left to right */
+    }
+}
+
+
+/* Circular logo */
+.lock-logo img {
+    width: auto; /* Adjust size as needed */
+    height: 100px;
+    border-radius: 50%; /* Makes the image a circle */
+    border: 2px solid white; /* Optional: border around the circle */
+    margin-bottom: 20px;
+}
+
+/* Oval password box */
+.password-box input {
+    width: 300px;
+    padding: 15px;
+    border-radius: 20px; /* Oval shape */
+    border: none;
+    font-size: 1.2rem;
+    text-align: center;
+    background-color: white;
+    color: #333;
+    outline: none;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+}
+
+/* Password hint */
+.password-hint {
+    margin-top: 20px;
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.7); /* Faded white for the hint */
+}
+
+
+
+/* Reset some default browser styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Desktop Background */
+.desktop {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    background-image: url('images/desktopbackground.png'); /* Path to your image */
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end; /* Align taskbar at the bottom */
+}
+
+/* Taskbar */
+.taskbar {
+    background-color: rgba(175, 203, 223, 0.7); /* Semi-transparent black */
+    width: 100%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    position: absolute;
+    bottom: 0;
+}
+
+/* Taskbar Logo */
+.taskbar-logo img {
+    height: 40px; /* Adjust the height as needed */
+    width: auto;  /* Keep the aspect ratio */
+    margin-right: 20px; /* Space between logo and icons */
+}
+
+.taskbar-icon {
+    color: white;
+    font-family: Arial, sans-serif;
+    margin-right: 20px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.taskbar-icon:hover {
+    color: lightgray;
+}
+
+/* Desktop Icons */
+.desktop-icons {
+    display: flex;
+    flex-wrap: wrap;
+    position: absolute;
+    top: 50px;
+    left: 50px;
+}
+
+.icon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
+    cursor: pointer;
+    text-align: center;
+}
+
+.icon img {
+    width: 64px; /* Adjust icon size */
+    height: 64px;
+}
+
+.icon p {
+    color: white;
+    font-family: Arial, sans-serif;
+    margin-top: 10px;
+}
+
+.icon:hover img {
+    transform: scale(1.1); /* Slightly enlarges icon on hover */
+}
+
+/* Windows (Resume Sections) */
+.window {
+    width: 600px;
+    height: 400px;
+    background-color: #f4f4f9; /* Light background color */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 15px; /* Rounded corners */
+    border: 1px solid #ddd;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2); /* Soft shadow for a lifted effect */
+    display: flex;
+    flex-direction: column;
+    z-index: 10;
+    overflow: hidden; /* Ensures content stays within window bounds */
+    animation: fadeIn 0.3s ease-in-out; /* Fade-in animation */
+}
+
+/* Animation for window appearance */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translate(-50%, -60%); /* Slightly above initial position */
+    }
+    to {
+        opacity: 1;
+        transform: translate(-50%, -50%); /* Centered */
+    }
+}
+
+.window-header {
+    background-color: #f8bfec;
+    color: white;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Arial', sans-serif;
+    font-size: 1.2em; /* Larger font for the header */
+    border-bottom: 2px solid #ddd;
+    border-radius: 15px 15px 0 0; /* Rounds the top of the window */
+}
+
+.window-content {
+    padding: 20px;
+    font-family: 'Arial', sans-serif;
+    color: #000000;
+    font-size: 1em;
+    overflow-y: auto;
+    background-color: #ffffff; /* White background for content */
+    border-radius: 0 0 15px 15px; /* Rounds the bottom of the window */
+}
+
+.close-btn {
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 50%; /* Circle close button */
+    font-size: 1em;
+    transition: background-color 0.2s ease; /* Smooth hover transition */
+}
+
+.close-btn:hover {
+    background-color: darkred;
+}
+
+/* Customize scrollbar appearance inside the window content */
+.window-content::-webkit-scrollbar {
+    width: 8px;
+}
+
+.window-content::-webkit-scrollbar-thumb {
+    background-color: #888;
+    border-radius: 10px;
+}
+
+.window-content::-webkit-scrollbar-thumb:hover {
+    background-color: #000000;
+}
+
+/* Indent paragraphs inside the window-content */
+.window-content p {
+    text-indent: 30px; /* Adjust the value to set the indent size */
+    margin-bottom: 15px; /* Adds some spacing between paragraphs */
+    font-weight: 400; /* Use a standard font weight for clarity */
+}
+
+.window-content {
+    padding: 10px 20px; /* Adjust padding to give more room for content */
+    height: calc(100% - 40px); /* Subtract header height to ensure proper space */
+    overflow-y: auto; /* Enables vertical scrolling */
+}
+/* Improves text clarity and sharpness */
+.window-content, .window-header {
+    -webkit-font-smoothing: antialiased; /* For WebKit browsers */
+    -moz-osx-font-smoothing: grayscale;  /* For Firefox on macOS */
+    text-rendering: optimizeLegibility;  /* Enhances text readability */
+}
+
+
+/* Responsiveness */
+@media (max-width: 768px) {
+    .window {
+        width: 90%;
+        height: 50%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .taskbar {
+        padding: 0 10px;
+    }
+
+    .taskbar-icon {
+        font-size: 12px;
+        margin-right: 10px;
+    }
+
+    .icon img {
+        width: 48px;
+        height: 48px;
+    }
+}
+
+/* Remove underline from links in desktop icons */
+.icon a {
+    text-decoration: none;  /* This removes the underline */
+    color: inherit;         /* This ensures the text takes the color of the surrounding element */
+}
+
+.icon a:hover {
+    text-decoration: none;  /* Ensures it stays underlineless on hover */
+}
+
+/* Contact Form Styling */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form label {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+form input, form textarea {
+    margin-bottom: 15px;
+    padding: 10px;
+    font-size: 1em;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+form button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #45a049;
+}
+
